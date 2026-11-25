@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "SlotMate — Gestione Appuntamenti Smart",
+    "description": "Applicazione web progressiva mobile-first per organizzare fasce orarie e appuntamenti in modo semplice."
+  },
+  "header": {
+    "brand": "SlotMate",
+    "tagline": "Milestone 1 · Fondamenta",
+    "languageLabel": "Lingua",
+    "offlineBadge": "Modalità offline",
+    "onlineBadge": "Online"
+  },
+  "hero": {
+    "badge": "Milestone 1 · Anteprima Locale",
+    "title": "Organizza ogni fascia oraria con semplicità.",
+    "subtitle": "SlotMate è progettata prima per smartphone, con supporto multilingua nativo e installazione come app (PWA). L'integrazione con Supabase arriverà nella Milestone 2.",
+    "primaryAction": "Esplora gli slot demo",
+    "secondaryAction": "Stato PWA"
+  },
+  "tabs": {
+    "overview": "Panoramica",
+    "slots": "Slot Demo",
+    "pwa": "App & PWA",
+    "roadmap": "Milestone"
+  },
+  "metrics": {
+    "title": "Stato delle Fondamenta",
+    "items": [
+      {
+        "label": "Lingua predefinita",
+        "value": "Italiano (IT)",
+        "detail": "Pronta per EN, AR (RTL), ES"
+      },
+      {
+        "label": "Design",
+        "value": "Mobile-First",
+        "detail": "Layout adattivo con Tailwind CSS"
+      },
+      {
+        "label": "Esperienza App",
+        "value": "PWA Ready",
+        "detail": "Manifest, icone e Service Worker"
+      },
+      {
+        "label": "Database",
+        "value": "In attesa (M2)",
+        "detail": "Supabase non ancora avviato"
+      }
+    ]
+  },
+  "slots": {
+    "title": "Agenda Giornaliera (Anteprima Locale)",
+    "subtitle": "Seleziona una fascia oraria per simulare una prenotazione locale senza database.",
+    "resetButton": "Ripristina demo",
+    "statusAvailable": "Disponibile",
+    "statusReserved": "Selezionato",
+    "bookButton": "Seleziona",
+    "releaseButton": "Annulla",
+    "selectedNotice": "Hai selezionato la fascia delle",
+    "noSelection": "Nessuna fascia selezionata al momento.",
+    "demoItems": [
+      {
+        "id": "slot-1",
+        "time": "09:30",
+        "duration": "30 min",
+        "title": "Consulenza Rapida",
+        "category": "Mattina"
+      },
+      {
+        "id": "slot-2",
+        "time": "11:00",
+        "duration": "45 min",
+        "title": "Sessione Strategica",
+        "category": "Mattina"
+      },
+      {
+        "id": "slot-3",
+        "time": "14:30",
+        "duration": "30 min",
+        "title": "Controllo Periodico",
+        "category": "Pomeriggio"
+      },
+      {
+        "id": "slot-4",
+        "time": "17:00",
+        "duration": "60 min",
+        "title": "Appuntamento Completo",
+        "category": "Pomeriggio"
+      }
+    ]
+  },
+  "pwa": {
+    "title": "Fondamenta PWA",
+    "subtitle": "SlotMate include il manifesto web, icone dedicati e la registrazione del Service Worker.",
+    "swLabel": "Service Worker",
+    "swChecking": "Verifica in corso...",
+    "swActive": "Registrato e pronto (/sw.js)",
+    "swUnsupported": "Non supportato da questo browser",
+    "swError": "Registrazione non riuscita",
+    "connectionLabel": "Connessione",
+    "online": "Connesso",
+    "offline": "Offline (cache locale attiva)",
+    "installButton": "Installa SlotMate",
+    "installedNotice": "SlotMate è già installata o in esecuzione come app.",
+    "iosHint": "Su iPhone/iPad: tocca Condividi in Safari e scegli \"Aggiungi alla schermata Home\".",
+    "browserHint": "Su desktop o Android puoi installare l'app dal menu del browser quando è servita in HTTPS."
+  },
+  "roadmap": {
+    "title": "Piano Milestone 1",
+    "subtitle": "Cosa è incluso ora e cosa arriverà nei prossimi passi.",
+    "completedLabel": "Completato",
+    "nextLabel": "Prossima Milestone",
+    "items": [
+      {
+        "title": "Next.js App Router + TypeScript",
+        "description": "Struttura moderna con validazione rigorosa dei tipi.",
+        "done": true
+      },
+      {
+        "title": "Italiano predefinito + EN, AR, ES",
+        "description": "Traduzioni tipizzate e supporto RTL automatico per l'arabo.",
+        "done": true
+      },
+      {
+        "title": "Interfaccia Mobile-First + PWA",
+        "description": "Manifesto, icone PNG, Service Worker e navigazione touch.",
+        "done": true
+      },
+      {
+        "title": "Integrazione Supabase (Milestone 2)",
+        "description": "Autenticazione, persistenza reale degli slot e notifiche.",
+        "done": false
+      }
+    ]
+  },
+  "footer": {
+    "note": "SlotMate · Milestone 1 · Tutto pronto per i prossimi sviluppi."
+  }
+}

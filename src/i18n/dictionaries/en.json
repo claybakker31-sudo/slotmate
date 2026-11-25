@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "SlotMate — Smart Appointment Scheduling",
+    "description": "Mobile-first Progressive Web App for organizing time slots and appointments effortlessly."
+  },
+  "header": {
+    "brand": "SlotMate",
+    "tagline": "Milestone 1 · Foundation",
+    "languageLabel": "Language",
+    "offlineBadge": "Offline mode",
+    "onlineBadge": "Online"
+  },
+  "hero": {
+    "badge": "Milestone 1 · Local Preview",
+    "title": "Organize every time slot with clarity.",
+    "subtitle": "SlotMate is built mobile-first, with native multi-language support and Progressive Web App installability. Supabase integration will begin in Milestone 2.",
+    "primaryAction": "Explore demo slots",
+    "secondaryAction": "PWA Status"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "slots": "Demo Slots",
+    "pwa": "App & PWA",
+    "roadmap": "Milestone"
+  },
+  "metrics": {
+    "title": "Foundation Status",
+    "items": [
+      {
+        "label": "Default language",
+        "value": "Italian (IT)",
+        "detail": "Ready for EN, AR (RTL), ES"
+      },
+      {
+        "label": "Design",
+        "value": "Mobile-First",
+        "detail": "Responsive layout with Tailwind CSS"
+      },
+      {
+        "label": "App Experience",
+        "value": "PWA Ready",
+        "detail": "Manifest, icons, and Service Worker"
+      },
+      {
+        "label": "Database",
+        "value": "Pending (M2)",
+        "detail": "Supabase intentionally not started yet"
+      }
+    ]
+  },
+  "slots": {
+    "title": "Daily Schedule (Local Preview)",
+    "subtitle": "Select a time slot to simulate a local booking without a database.",
+    "resetButton": "Reset demo",
+    "statusAvailable": "Available",
+    "statusReserved": "Selected",
+    "bookButton": "Select",
+    "releaseButton": "Release",
+    "selectedNotice": "You selected the slot at",
+    "noSelection": "No time slot selected yet.",
+    "demoItems": [
+      {
+        "id": "slot-1",
+        "time": "09:30",
+        "duration": "30 min",
+        "title": "Quick Consultation",
+        "category": "Morning"
+      },
+      {
+        "id": "slot-2",
+        "time": "11:00",
+        "duration": "45 min",
+        "title": "Strategy Session",
+        "category": "Morning"
+      },
+      {
+        "id": "slot-3",
+        "time": "14:30",
+        "duration": "30 min",
+        "title": "Follow-up Check",
+        "category": "Afternoon"
+      },
+      {
+        "id": "slot-4",
+        "time": "17:00",
+        "duration": "60 min",
+        "title": "Full Appointment",
+        "category": "Afternoon"
+      }
+    ]
+  },
+  "pwa": {
+    "title": "PWA Foundation",
+    "subtitle": "SlotMate includes a web app manifest, dedicated icons, and Service Worker registration.",
+    "swLabel": "Service Worker",
+    "swChecking": "Checking...",
+    "swActive": "Registered and ready (/sw.js)",
+    "swUnsupported": "Not supported in this browser",
+    "swError": "Registration failed",
+    "connectionLabel": "Connection",
+    "online": "Connected",
+    "offline": "Offline (local cache active)",
+    "installButton": "Install SlotMate",
+    "installedNotice": "SlotMate is already installed or running in standalone mode.",
+    "iosHint": "On iPhone/iPad: tap Share in Safari and choose \"Add to Home Screen\".",
+    "browserHint": "On desktop or Android you can install the app from the browser menu when served over HTTPS."
+  },
+  "roadmap": {
+    "title": "Milestone 1 Plan",
+    "subtitle": "What is already in place and what comes next.",
+    "completedLabel": "Completed",
+    "nextLabel": "Next Milestone",
+    "items": [
+      {
+        "title": "Next.js App Router + TypeScript",
+        "description": "Modern structure with strict type validation.",
+        "done": true
+      },
+      {
+        "title": "Italian default + EN, AR, ES",
+        "description": "Typed translation dictionaries and automatic RTL for Arabic.",
+        "done": true
+      },
+      {
+        "title": "Mobile-First UI + PWA",
+        "description": "Manifest, PNG icons, Service Worker, and touch navigation.",
+        "done": true
+      },
+      {
+        "title": "Supabase Integration (Milestone 2)",
+        "description": "Authentication, real slot persistence, and notifications.",
+        "done": false
+      }
+    ]
+  },
+  "footer": {
+    "note": "SlotMate · Milestone 1 · Ready for the next development phase."
+  }
+}

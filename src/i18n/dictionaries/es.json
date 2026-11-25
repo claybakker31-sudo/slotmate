@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "SlotMate — Gestión Inteligente de Citas",
+    "description": "Aplicación web progresiva mobile-first para organizar franjas horarias y citas de forma sencilla."
+  },
+  "header": {
+    "brand": "SlotMate",
+    "tagline": "Hito 1 · Base",
+    "languageLabel": "Idioma",
+    "offlineBadge": "Modo sin conexión",
+    "onlineBadge": "En línea"
+  },
+  "hero": {
+    "badge": "Hito 1 · Vista Previa Local",
+    "title": "Organiza cada franja horaria con claridad.",
+    "subtitle": "SlotMate está diseñada primero para móviles, con soporte multilingüe nativo e instalación como app (PWA). La integración con Supabase comenzará en el Hito 2.",
+    "primaryAction": "Explorar franjas demo",
+    "secondaryAction": "Estado PWA"
+  },
+  "tabs": {
+    "overview": "Resumen",
+    "slots": "Franjas Demo",
+    "pwa": "App y PWA",
+    "roadmap": "Hito"
+  },
+  "metrics": {
+    "title": "Estado de la Base",
+    "items": [
+      {
+        "label": "Idioma predeterminado",
+        "value": "Italiano (IT)",
+        "detail": "Listo para EN, AR (RTL), ES"
+      },
+      {
+        "label": "Diseño",
+        "value": "Mobile-First",
+        "detail": "Diseño adaptable con Tailwind CSS"
+      },
+      {
+        "label": "Experiencia App",
+        "value": "PWA Ready",
+        "detail": "Manifiesto, iconos y Service Worker"
+      },
+      {
+        "label": "Base de datos",
+        "value": "Pendiente (H2)",
+        "detail": "Supabase aún no iniciado"
+      }
+    ]
+  },
+  "slots": {
+    "title": "Agenda Diaria (Vista Local)",
+    "subtitle": "Selecciona una franja horaria para simular una reserva local sin base de datos.",
+    "resetButton": "Reiniciar demo",
+    "statusAvailable": "Disponible",
+    "statusReserved": "Seleccionado",
+    "bookButton": "Seleccionar",
+    "releaseButton": "Soltar",
+    "selectedNotice": "Has seleccionado la franja de las",
+    "noSelection": "Ninguna franja seleccionada todavía.",
+    "demoItems": [
+      {
+        "id": "slot-1",
+        "time": "09:30",
+        "duration": "30 min",
+        "title": "Consulta Rápida",
+        "category": "Mañana"
+      },
+      {
+        "id": "slot-2",
+        "time": "11:00",
+        "duration": "45 min",
+        "title": "Sesión Estratégica",
+        "category": "Mañana"
+      },
+      {
+        "id": "slot-3",
+        "time": "14:30",
+        "duration": "30 min",
+        "title": "Revisión Periódica",
+        "category": "Tarde"
+      },
+      {
+        "id": "slot-4",
+        "time": "17:00",
+        "duration": "60 min",
+        "title": "Cita Completa",
+        "category": "Tarde"
+      }
+    ]
+  },
+  "pwa": {
+    "title": "Base PWA",
+    "subtitle": "SlotMate incluye manifiesto web, iconos dedicados y registro del Service Worker.",
+    "swLabel": "Service Worker",
+    "swChecking": "Comprobando...",
+    "swActive": "Registrado y listo (/sw.js)",
+    "swUnsupported": "No compatible con este navegador",
+    "swError": "Error al registrar",
+    "connectionLabel": "Conexión",
+    "online": "Conectado",
+    "offline": "Sin conexión (caché local activa)",
+    "installButton": "Instalar SlotMate",
+    "installedNotice": "SlotMate ya está instalada o ejecutándose como app.",
+    "iosHint": "En iPhone/iPad: toca Compartir en Safari y elige \"Añadir a pantalla de inicio\".",
+    "browserHint": "En escritorio o Android puedes instalar la app desde el menú del navegador bajo HTTPS."
+  },
+  "roadmap": {
+    "title": "Plan del Hito 1",
+    "subtitle": "Lo que ya está construido y lo que llegará después.",
+    "completedLabel": "Completado",
+    "nextLabel": "Siguiente Hito",
+    "items": [
+      {
+        "title": "Next.js App Router + TypeScript",
+        "description": "Estructura moderna con validación estricta de tipos.",
+        "done": true
+      },
+      {
+        "title": "Italiano por defecto + EN, AR, ES",
+        "description": "Diccionarios tipados y soporte RTL automático para árabe.",
+        "done": true
+      },
+      {
+        "title": "Interfaz Mobile-First + PWA",
+        "description": "Manifiesto, iconos PNG, Service Worker y navegación táctil.",
+        "done": true
+      },
+      {
+        "title": "Integración con Supabase (Hito 2)",
+        "description": "Autenticación, persistencia real de citas y notificaciones.",
+        "done": false
+      }
+    ]
+  },
+  "footer": {
+    "note": "SlotMate · Hito 1 · Lista para la siguiente fase."
+  }
+}

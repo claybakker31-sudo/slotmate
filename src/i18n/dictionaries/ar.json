@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "SlotMate — إدارة المواعيد بذكاء",
+    "description": "تطبيق ويب تقدمي مصمم أولاً للهواتف لتنظيم الفترات الزمنية والمواعيد بسهولة."
+  },
+  "header": {
+    "brand": "SlotMate",
+    "tagline": "المرحلة 1 · الأساس",
+    "languageLabel": "اللغة",
+    "offlineBadge": "وضع عدم الاتصال",
+    "onlineBadge": "متصل"
+  },
+  "hero": {
+    "badge": "المرحلة 1 · معاينة محلية",
+    "title": "نظّم كل فترة زمنية بكل وضوح وسهولة.",
+    "subtitle": "تم بناء SlotMate أولاً للهواتف الذكية مع دعم أصلي لعدة لغات وقابلية التثبيت كتطبيق (PWA). سيبدأ دمج Supabase في المرحلة 2.",
+    "primaryAction": "استكشف المواعيد التجريبية",
+    "secondaryAction": "حالة PWA"
+  },
+  "tabs": {
+    "overview": "نظرة عامة",
+    "slots": "مواعيد تجريبية",
+    "pwa": "التطبيق وPWA",
+    "roadmap": "المرحلة"
+  },
+  "metrics": {
+    "title": "حالة الأساس التقني",
+    "items": [
+      {
+        "label": "اللغة الافتراضية",
+        "value": "الإيطالية (IT)",
+        "detail": "جاهز للغات EN وAR (RTL) وES"
+      },
+      {
+        "label": "التصميم",
+        "value": "Mobile-First",
+        "detail": "واجهة متجاوبة باستخدام Tailwind CSS"
+      },
+      {
+        "label": "تجربة التطبيق",
+        "value": "جاهز لـ PWA",
+        "detail": "ملف Manifest وأيقونات وService Worker"
+      },
+      {
+        "label": "قاعدة البيانات",
+        "value": "قيد الانتظار (M2)",
+        "detail": "لم يتم بدء Supabase بعد"
+      }
+    ]
+  },
+  "slots": {
+    "title": "الجدول اليومي (معاينة محلية)",
+    "subtitle": "اختر فترة زمنية لمحاكاة الحجز محلياً بدون قاعدة بيانات.",
+    "resetButton": "إعادة تعيين",
+    "statusAvailable": "متاح",
+    "statusReserved": "مختار",
+    "bookButton": "اختيار",
+    "releaseButton": "إلغاء",
+    "selectedNotice": "لقد اخترت الموعد في الساعة",
+    "noSelection": "لم يتم اختيار أي موعد حتى الآن.",
+    "demoItems": [
+      {
+        "id": "slot-1",
+        "time": "09:30",
+        "duration": "30 د",
+        "title": "استشارة سريعة",
+        "category": "الصباح"
+      },
+      {
+        "id": "slot-2",
+        "time": "11:00",
+        "duration": "45 د",
+        "title": "جلسة استراتيجية",
+        "category": "الصباح"
+      },
+      {
+        "id": "slot-3",
+        "time": "14:30",
+        "duration": "30 د",
+        "title": "متابعة دورية",
+        "category": "بعد الظهر"
+      },
+      {
+        "id": "slot-4",
+        "time": "17:00",
+        "duration": "60 د",
+        "title": "موعد كامل",
+        "category": "بعد الظهر"
+      }
+    ]
+  },
+  "pwa": {
+    "title": "أساس تطبيق الويب التقدمي (PWA)",
+    "subtitle": "يتضمن SlotMate ملف manifest وأيقونات مخصصة وتسجيل Service Worker.",
+    "swLabel": "Service Worker",
+    "swChecking": "جارٍ التحقق...",
+    "swActive": "مسجل وجاهز (/sw.js)",
+    "swUnsupported": "غير مدعوم في هذا المتصفح",
+    "swError": "فشل التسجيل",
+    "connectionLabel": "الاتصال",
+    "online": "متصل",
+    "offline": "غير متصل (التخزين المحلي نشط)",
+    "installButton": "تثبيت SlotMate",
+    "installedNotice": "تم تثبيت SlotMate بالفعل أو يعمل كتطبيق مستقل.",
+    "iosHint": "على iPhone/iPad: اضغط على مشاركة في Safari ثم اختر \"إضافة إلى الشاشة الرئيسية\".",
+    "browserHint": "على سطح المكتب أو Android يمكنك تثبيت التطبيق من قائمة المتصفح عند العمل عبر HTTPS."
+  },
+  "roadmap": {
+    "title": "خطة المرحلة 1",
+    "subtitle": "ما تم إنجازه الآن وما سيأتي في المرحلة التالية.",
+    "completedLabel": "مكتمل",
+    "nextLabel": "المرحلة القادمة",
+    "items": [
+      {
+        "title": "Next.js App Router + TypeScript",
+        "description": "بنية حديثة مع فحص صارم للأنواع.",
+        "done": true
+      },
+      {
+        "title": "الإيطالية افتراضياً + EN وAR وES",
+        "description": "قواميس ترجمة منظمة ودعم تلقائي لاتجاه RTL للعربية.",
+        "done": true
+      },
+      {
+        "title": "واجهة Mobile-First + PWA",
+        "description": "ملف Manifest وأيقونات PNG وService Worker وتنقل مريح للمس.",
+        "done": true
+      },
+      {
+        "title": "دمج Supabase (المرحلة 2)",
+        "description": "المصادقة وحفظ المواعيد فعلياً والإشعارات.",
+        "done": false
+      }
+    ]
+  },
+  "footer": {
+    "note": "SlotMate · المرحلة 1 · جاهز لمرحلة التطوير التالية."
+  }
+}
