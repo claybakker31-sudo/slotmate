@@ -28,10 +28,11 @@ export default async function LocaleHomePage({
           }
         >
           <AuthStatusBar
-            locale={lang}
-            authCopy={dict.auth}
-            searchParams={searchParams}
-          />
+  locale={lang}
+  authCopy={dict.auth}
+  dashboardCopy={dict.dashboard}
+  searchParams={searchParams}
+/>
         </Suspense>
       }
     />

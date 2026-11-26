@@ -1,3 +1,4 @@
+import { connection } from "next/server";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -18,7 +19,8 @@ export async function AuthStatusBar({
   dashboardCopy,
   searchParams,
 }: AuthStatusBarProps) {
-  const [data, resolvedSearchParams] = await Promise.all([
+    await connection();
+    const [data, resolvedSearchParams] = await Promise.all([
     getDashboardData(),
     searchParams ?? Promise.resolve({} as Record<string, string | string[] | undefined>),
   ]);
