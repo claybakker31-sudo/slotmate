@@ -135,5 +135,75 @@
   },
   "footer": {
     "note": "SlotMate · Milestone 1 · Tutto pronto per i prossimi sviluppi."
+  },
+  "auth": {
+    "header": {
+      "signIn": "Accedi",
+      "register": "Registrati",
+      "logout": "Esci",
+      "loggingOut": "Uscita...",
+      "signedInAs": "Accesso attivo",
+      "sessionActive": "Sessione attiva",
+      "backToHome": "Torna alla home"
+    },
+    "login": {
+      "metaTitle": "Accedi — SlotMate",
+      "metaDescription": "Accedi al tuo account SlotMate per mantenere la sessione attiva.",
+      "badge": "Milestone 2 · Autenticazione",
+      "title": "Bentornato su SlotMate",
+      "subtitle": "Inserisci le tue credenziali per accedere alla tua sessione.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "nome@azienda.it",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Inserisci la password",
+      "showPassword": "Mostra",
+      "hidePassword": "Nascondi",
+      "submit": "Accedi",
+      "submitting": "Accesso in corso...",
+      "noAccount": "Non hai ancora un account?",
+      "createAccountLink": "Crea account",
+      "loggedOutNotice": "Hai effettuato il logout in modo sicuro.",
+      "confirmedNotice": "Email verificata con successo. Ora sei autenticato."
+    },
+    "register": {
+      "metaTitle": "Registrati — SlotMate",
+      "metaDescription": "Crea il tuo account SlotMate e inizia a gestire gli appuntamenti.",
+      "badge": "Milestone 2 · Nuovo Account",
+      "title": "Crea il tuo account SlotMate",
+      "subtitle": "Registrati in pochi secondi per attivare profilo e area di lavoro.",
+      "fullNameLabel": "Nome completo",
+      "fullNamePlaceholder": "Mario Rossi",
+      "businessNameLabel": "Nome attività (opzionale)",
+      "businessNamePlaceholder": "Studio Rossi",
+      "businessNameHint": "Se inserito, creiamo automaticamente la tua prima attività.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "nome@azienda.it",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Minimo 8 caratteri",
+      "passwordHint": "Usa almeno 8 caratteri per proteggere il tuo account.",
+      "confirmPasswordLabel": "Conferma password",
+      "confirmPasswordPlaceholder": "Ripeti la password",
+      "submit": "Registrati",
+      "submitting": "Registrazione in corso...",
+      "hasAccount": "Hai già un account?",
+      "signInLink": "Accedi",
+      "confirmEmailTitle": "Controlla la tua email",
+      "confirmEmailBody": "Abbiamo inviato un link di conferma al tuo indirizzo email. Aprilo per completare l'accesso.",
+      "confirmEmailHint": "Controlla anche la cartella spam o promozioni se non lo vedi entro un minuto.",
+      "backToLogin": "Vai al login"
+    },
+    "errors": {
+      "invalidEmail": "Inserisci un indirizzo email valido.",
+      "fullNameTooShort": "Il nome completo deve contenere almeno 2 caratteri.",
+      "businessNameTooShort": "Il nome dell'attività deve contenere almeno 2 caratteri.",
+      "passwordTooShort": "La password deve contenere almeno 8 caratteri.",
+      "passwordsMismatch": "Le password non coincidono.",
+      "invalidCredentials": "Email o password non corretti.",
+      "emailNotConfirmed": "Conferma prima il tuo indirizzo email tramite il link ricevuto.",
+      "userAlreadyExists": "Esiste già un account associato a questa email. Prova ad accedere.",
+      "rateLimited": "Troppi tentativi ravvicinati. Riprova tra qualche istante.",
+      "callbackFailed": "Il link di verifica non è valido o è scaduto. Richiedine uno nuovo o accedi.",
+      "generic": "Si è verificato un errore durante l'autenticazione. Riprova."
+    }
   }
 }

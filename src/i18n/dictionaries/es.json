@@ -135,5 +135,75 @@
   },
   "footer": {
     "note": "SlotMate · Hito 1 · Lista para la siguiente fase."
+  },
+  "auth": {
+    "header": {
+      "signIn": "Iniciar sesión",
+      "register": "Registrarse",
+      "logout": "Cerrar sesión",
+      "loggingOut": "Saliendo...",
+      "signedInAs": "Sesión iniciada",
+      "sessionActive": "Sesión activa",
+      "backToHome": "Volver al inicio"
+    },
+    "login": {
+      "metaTitle": "Iniciar sesión — SlotMate",
+      "metaDescription": "Inicia sesión en tu cuenta de SlotMate con sesión persistente.",
+      "badge": "Hito 2 · Autenticación",
+      "title": "Bienvenido de nuevo a SlotMate",
+      "subtitle": "Introduce tus credenciales para acceder a tu sesión.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "nombre@empresa.com",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Introduce tu contraseña",
+      "showPassword": "Mostrar",
+      "hidePassword": "Ocultar",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión...",
+      "noAccount": "¿Aún no tienes una cuenta?",
+      "createAccountLink": "Crear cuenta",
+      "loggedOutNotice": "Has cerrado sesión de forma segura.",
+      "confirmedNotice": "Correo verificado correctamente. Ya has iniciado sesión."
+    },
+    "register": {
+      "metaTitle": "Registrarse — SlotMate",
+      "metaDescription": "Crea tu cuenta de SlotMate y configura tu espacio de trabajo.",
+      "badge": "Hito 2 · Nueva Cuenta",
+      "title": "Crea tu cuenta en SlotMate",
+      "subtitle": "Regístrate en segundos para activar tu perfil y espacio de trabajo.",
+      "fullNameLabel": "Nombre completo",
+      "fullNamePlaceholder": "Lucía García",
+      "businessNameLabel": "Nombre del negocio (opcional)",
+      "businessNamePlaceholder": "Estudio García",
+      "businessNameHint": "Si lo indicas, crearemos tu primer negocio automáticamente.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "nombre@empresa.com",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "passwordHint": "Usa al menos 8 caracteres para proteger tu cuenta.",
+      "confirmPasswordLabel": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Repite la contraseña",
+      "submit": "Crear cuenta",
+      "submitting": "Creando cuenta...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Iniciar sesión",
+      "confirmEmailTitle": "Revisa tu correo",
+      "confirmEmailBody": "Enviamos un enlace de confirmación a tu correo electrónico. Ábrelo para completar el acceso.",
+      "confirmEmailHint": "Revisa tu carpeta de spam o promociones si no lo ves en un minuto.",
+      "backToLogin": "Ir a iniciar sesión"
+    },
+    "errors": {
+      "invalidEmail": "Introduce un correo electrónico válido.",
+      "fullNameTooShort": "El nombre completo debe tener al menos 2 caracteres.",
+      "businessNameTooShort": "El nombre del negocio debe tener al menos 2 caracteres.",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "passwordsMismatch": "Las contraseñas no coinciden.",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "emailNotConfirmed": "Confirma primero tu correo electrónico mediante el enlace recibido.",
+      "userAlreadyExists": "Ya existe una cuenta con este correo. Prueba a iniciar sesión.",
+      "rateLimited": "Demasiados intentos seguidos. Espera un momento y vuelve a intentarlo.",
+      "callbackFailed": "El enlace de verificación no es válido o ha caducado. Inicia sesión o solicita uno nuevo.",
+      "generic": "Se produjo un error durante la autenticación. Inténtalo de nuevo."
+    }
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useIsOnline } from "@/hooks/useBrowserStatus";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -12,9 +12,10 @@ type MobileTab = "overview" | "slots" | "pwa" | "roadmap";
 interface SlotMateShellProps {
   locale: Locale;
   dict: Dictionary;
+  authSlot?: ReactNode;
 }
 
-export function SlotMateShell({ locale, dict }: SlotMateShellProps) {
+export function SlotMateShell({ locale, dict, authSlot }: SlotMateShellProps) {
   const [activeTab, setActiveTab] = useState<MobileTab>("overview");
   const [selectedSlotId, setSelectedSlotId] = useState<string | null>(null);
   const isOnline = useIsOnline();
@@ -62,6 +63,7 @@ export function SlotMateShell({ locale, dict }: SlotMateShellProps) {
       </header>
 
       <main className="mx-auto flex max-w-5xl flex-col gap-6 px-4 pt-5 sm:px-6 sm:pt-8">
+        {authSlot}
         <section
           className={`${
             activeTab === "overview" ? "block" : "hidden md:block"

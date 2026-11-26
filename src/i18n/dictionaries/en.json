@@ -135,5 +135,75 @@
   },
   "footer": {
     "note": "SlotMate · Milestone 1 · Ready for the next development phase."
+  },
+  "auth": {
+    "header": {
+      "signIn": "Sign in",
+      "register": "Register",
+      "logout": "Log out",
+      "loggingOut": "Logging out...",
+      "signedInAs": "Signed in",
+      "sessionActive": "Active session",
+      "backToHome": "Back to home"
+    },
+    "login": {
+      "metaTitle": "Sign in — SlotMate",
+      "metaDescription": "Sign in to your SlotMate account with persistent session support.",
+      "badge": "Milestone 2 · Authentication",
+      "title": "Welcome back to SlotMate",
+      "subtitle": "Enter your credentials to access your persisted session.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "name@company.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "showPassword": "Show",
+      "hidePassword": "Hide",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account yet?",
+      "createAccountLink": "Create account",
+      "loggedOutNotice": "You have been signed out safely.",
+      "confirmedNotice": "Email verified successfully. You are now signed in."
+    },
+    "register": {
+      "metaTitle": "Register — SlotMate",
+      "metaDescription": "Create your SlotMate account and set up your workspace.",
+      "badge": "Milestone 2 · New Account",
+      "title": "Create your SlotMate account",
+      "subtitle": "Sign up in seconds to initialize your profile and workspace.",
+      "fullNameLabel": "Full name",
+      "fullNamePlaceholder": "Alex Morgan",
+      "businessNameLabel": "Business name (optional)",
+      "businessNamePlaceholder": "Morgan Studio",
+      "businessNameHint": "If provided, your initial business workspace is created automatically.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "name@company.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "passwordHint": "Use at least 8 characters to keep your account secure.",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "confirmEmailTitle": "Check your inbox",
+      "confirmEmailBody": "We sent a confirmation link to your email address. Open it to complete sign-in.",
+      "confirmEmailHint": "Check your spam or promotions folder if you don't see it within a minute.",
+      "backToLogin": "Go to sign in"
+    },
+    "errors": {
+      "invalidEmail": "Please enter a valid email address.",
+      "fullNameTooShort": "Full name must be at least 2 characters.",
+      "businessNameTooShort": "Business name must be at least 2 characters.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "passwordsMismatch": "Passwords do not match.",
+      "invalidCredentials": "Invalid email or password.",
+      "emailNotConfirmed": "Please confirm your email address before signing in.",
+      "userAlreadyExists": "An account with this email already exists. Try signing in instead.",
+      "rateLimited": "Too many attempts. Please wait a moment and try again.",
+      "callbackFailed": "The verification link is invalid or expired. Please sign in or request a new link.",
+      "generic": "Something went wrong during authentication. Please try again."
+    }
   }
 }

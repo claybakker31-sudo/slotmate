@@ -135,5 +135,75 @@
   },
   "footer": {
     "note": "SlotMate · المرحلة 1 · جاهز لمرحلة التطوير التالية."
+  },
+  "auth": {
+    "header": {
+      "signIn": "تسجيل الدخول",
+      "register": "إنشاء حساب",
+      "logout": "تسجيل الخروج",
+      "loggingOut": "جارٍ الخروج...",
+      "signedInAs": "مسجل الدخول",
+      "sessionActive": "جلسة نشطة",
+      "backToHome": "العودة للرئيسية"
+    },
+    "login": {
+      "metaTitle": "تسجيل الدخول — SlotMate",
+      "metaDescription": "سجّل الدخول إلى حسابك في SlotMate مع حفظ الجلسة.",
+      "badge": "المرحلة 2 · المصادقة",
+      "title": "مرحباً بعودتك إلى SlotMate",
+      "subtitle": "أدخل بياناتك للوصول إلى جلستك المحفوظة.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "name@company.com",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "showPassword": "إظهار",
+      "hidePassword": "إخفاء",
+      "submit": "تسجيل الدخول",
+      "submitting": "جارٍ تسجيل الدخول...",
+      "noAccount": "ليس لديك حساب بعد؟",
+      "createAccountLink": "إنشاء حساب",
+      "loggedOutNotice": "تم تسجيل خروجك بأمان.",
+      "confirmedNotice": "تم تأكيد البريد الإلكتروني بنجاح. أنت الآن مسجل الدخول."
+    },
+    "register": {
+      "metaTitle": "إنشاء حساب — SlotMate",
+      "metaDescription": "أنشئ حسابك في SlotMate وابدأ بإدارة المواعيد.",
+      "badge": "المرحلة 2 · حساب جديد",
+      "title": "أنشئ حسابك في SlotMate",
+      "subtitle": "سجّل خلال ثوانٍ لتفعيل ملفك الشخصي ومساحة عملك.",
+      "fullNameLabel": "الاسم الكامل",
+      "fullNamePlaceholder": "أحمد علي",
+      "businessNameLabel": "اسم النشاط التجاري (اختياري)",
+      "businessNamePlaceholder": "استوديو النور",
+      "businessNameHint": "عند إدخاله، يتم إنشاء مساحة عملك الأولى تلقائياً.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "name@company.com",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "8 أحرف على الأقل",
+      "passwordHint": "استخدم 8 أحرف على الأقل لحماية حسابك.",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "submit": "إنشاء حساب",
+      "submitting": "جارٍ إنشاء الحساب...",
+      "hasAccount": "لديك حساب بالفعل؟",
+      "signInLink": "تسجيل الدخول",
+      "confirmEmailTitle": "تحقق من بريدك الإلكتروني",
+      "confirmEmailBody": "أرسلنا رابط تأكيد إلى بريدك الإلكتروني. افتحه لإكمال تسجيل الدخول.",
+      "confirmEmailHint": "تحقق من مجلد الرسائل غير المرغوب فيها إذا لم يصلك خلال دقيقة.",
+      "backToLogin": "الانتقال لتسجيل الدخول"
+    },
+    "errors": {
+      "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح.",
+      "fullNameTooShort": "يجب أن يتكون الاسم الكامل من حرفين على الأقل.",
+      "businessNameTooShort": "يجب أن يتكون اسم النشاط من حرفين على الأقل.",
+      "passwordTooShort": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+      "passwordsMismatch": "كلمتا المرور غير متطابقتين.",
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "emailNotConfirmed": "يرجى تأكيد بريدك الإلكتروني أولاً عبر الرابط المرسل.",
+      "userAlreadyExists": "يوجد حساب مسجل بهذا البريد الإلكتروني بالفعل. جرّب تسجيل الدخول.",
+      "rateLimited": "محاولات كثيرة جداً. يرجى الانتظار قليلاً والمحاولة مجدداً.",
+      "callbackFailed": "رابط التحقق غير صالح أو منتهي الصلاحية. حاول تسجيل الدخول أو اطلب رابطاً جديداً.",
+      "generic": "حدث خطأ أثناء المصادقة. يرجى المحاولة مرة أخرى."
+    }
   }
 }

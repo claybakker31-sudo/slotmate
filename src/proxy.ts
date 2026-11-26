@@ -1,6 +1,7 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, isLocale, LOCALE_COOKIE_NAME, locales } from "@/i18n/config";
+import { getSafeRedirectPath } from "@/lib/supabase/env";
+import { copySessionHeadersAndCookies, updateSession } from "@/lib/supabase/proxy";
 
 const PUBLIC_FILE_PATTERN = /\.[^/]+$/;
 
@@ -13,12 +14,14 @@ function getPreferredLocale(request: NextRequest) {
   return defaultLocale;
 }
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
+    pathname === "/auth/callback" ||
+    pathname.startsWith("/auth/") ||
     pathname === "/manifest.webmanifest" ||
     pathname === "/sw.js" ||
     PUBLIC_FILE_PATTERN.test(pathname)
@@ -26,19 +29,34 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const pathnameHasLocale = locales.some(
+  const matchedLocale = locales.find(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
-  if (pathnameHasLocale) {
-    return NextResponse.next();
+  if (!matchedLocale) {
+    const locale = getPreferredLocale(request);
+    const url = request.nextUrl.clone();
+    url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+
+    return NextResponse.redirect(url);
   }
 
-  const locale = getPreferredLocale(request);
-  const url = request.nextUrl.clone();
-  url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+  const { response, user } = await updateSession(request);
 
-  return NextResponse.redirect(url);
+  const isAuthPage =
+    pathname === `/${matchedLocale}/login` ||
+    pathname === `/${matchedLocale}/register`;
+
+  if (user && isAuthPage) {
+    const nextPath = getSafeRedirectPath(
+      request.nextUrl.searchParams.get("next"),
+      `/${matchedLocale}`
+    );
+    const redirectResponse = NextResponse.redirect(new URL(nextPath, request.url));
+    return copySessionHeadersAndCookies(response, redirectResponse);
+  }
+
+  return response;
 }
 
 export const config = {
