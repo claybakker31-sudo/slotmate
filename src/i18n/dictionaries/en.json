@@ -1,57 +1,120 @@
 {
   "metadata": {
-    "title": "SlotMate — Smart Appointment Scheduling",
-    "description": "Mobile-first Progressive Web App for organizing time slots and appointments effortlessly."
+    "title": "SlotMate — Multi-Tenant Appointment Scheduling",
+    "description": "Mobile-first Progressive Web App powered by Supabase Auth, live user profiles, and isolated business workspaces."
   },
   "header": {
     "brand": "SlotMate",
-    "tagline": "Milestone 1 · Foundation",
+    "tagline": "Milestone 2 · Multi-Tenant Workspaces",
     "languageLabel": "Language",
     "offlineBadge": "Offline mode",
     "onlineBadge": "Online"
   },
   "hero": {
-    "badge": "Milestone 1 · Local Preview",
-    "title": "Organize every time slot with clarity.",
-    "subtitle": "SlotMate is built mobile-first, with native multi-language support and Progressive Web App installability. Supabase integration will begin in Milestone 2.",
-    "primaryAction": "Explore demo slots",
+    "badge": "Milestone 2 · Live Auth & Database",
+    "title": "Organize businesses and time slots in real time.",
+    "subtitle": "SlotMate connects Supabase Auth, user profiles, and multi-tenant workspaces protected by Postgres Row Level Security.",
+    "primaryAction": "Explore schedule",
     "secondaryAction": "PWA Status"
   },
   "tabs": {
-    "overview": "Overview",
-    "slots": "Demo Slots",
+    "overview": "Dashboard",
+    "slots": "Schedule",
     "pwa": "App & PWA",
     "roadmap": "Milestone"
   },
   "metrics": {
-    "title": "Foundation Status",
+    "title": "Live Platform Status",
     "items": [
       {
-        "label": "Default language",
-        "value": "Italian (IT)",
-        "detail": "Ready for EN, AR (RTL), ES"
-      },
-      {
-        "label": "Design",
-        "value": "Mobile-First",
-        "detail": "Responsive layout with Tailwind CSS"
+        "label": "Active language",
+        "value": "English (EN)",
+        "detail": "Native IT, EN, AR (RTL), ES support"
       },
       {
         "label": "App Experience",
         "value": "PWA Ready",
-        "detail": "Manifest, icons, and Service Worker"
-      },
-      {
-        "label": "Database",
-        "value": "Pending (M2)",
-        "detail": "Supabase intentionally not started yet"
+        "detail": "Manifest, icons, and Service Worker active"
       }
-    ]
+    ],
+    "authCard": {
+      "label": "Authentication",
+      "authenticatedValue": "Authenticated",
+      "unauthenticatedValue": "Guest",
+      "authenticatedDetail": "Verified SSR session via Supabase Auth",
+      "unauthenticatedDetail": "Sign in or register to unlock your workspace"
+    },
+    "databaseCard": {
+      "label": "Supabase Database",
+      "connectedValue": "Connected",
+      "guestValue": "Supabase Live",
+      "offlineValue": "Unavailable",
+      "workspacesWord": "workspaces",
+      "slotsWord": "slots",
+      "guestDetail": "RLS enabled · Sign in to load your workspaces",
+      "offlineDetail": "Unable to verify database connectivity"
+    }
+  },
+  "dashboard": {
+    "authBadge": "Live Authentication Status",
+    "authenticated": "Authenticated",
+    "unauthenticated": "Signed out",
+    "verifiedEmail": "Email verified",
+    "pendingEmail": "Email verification pending",
+    "guestCardTitle": "Sign in to your SlotMate workspace",
+    "guestCardBody": "Authenticate with Supabase to view your live profile, create isolated business workspaces, and inspect database-backed metrics.",
+    "profileTitle": "Your Profile",
+    "profileSubtitle": "Synced live from Supabase Auth and public.profiles.",
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email",
+    "preferredLocaleLabel": "Preferred language",
+    "memberSinceLabel": "Member since",
+    "lastSignInLabel": "Last sign-in",
+    "userIdLabel": "User ID",
+    "unnamedUser": "Unnamed user",
+    "businessesTitle": "Your Businesses",
+    "businessesSubtitle": "Multi-tenant workspaces linked to your account.",
+    "noBusinesses": "You haven't created a business yet. Use the form next to this panel to launch your first workspace.",
+    "slotsCountLabel": "stored slots",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "roleLabels": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "staff": "Staff"
+    },
+    "createTitle": "Create a Business",
+    "createSubtitle": "Provision an isolated tenant workspace via the atomic register_business RPC.",
+    "nameLabel": "Business name",
+    "namePlaceholder": "e.g. Morgan Studio",
+    "slugLabel": "URL slug (optional)",
+    "slugPlaceholder": "morgan-studio",
+    "slugHint": "Leave blank to generate a clean URL slug automatically.",
+    "categoryLabel": "Category",
+    "categories": {
+      "general": "General",
+      "consulting": "Consulting",
+      "healthcare": "Healthcare & Clinics",
+      "beauty": "Beauty & Wellness",
+      "fitness": "Fitness & Coaching",
+      "other": "Other"
+    },
+    "timezoneLabel": "Timezone",
+    "submit": "Create business",
+    "submitting": "Creating business...",
+    "createdSuccess": "Business created and saved in Supabase:",
+    "errors": {
+      "unauthenticated": "You must be signed in to create a business.",
+      "nameLength": "Business name must be between 2 and 120 characters.",
+      "slugTaken": "That URL slug is already taken. Please choose another.",
+      "slugInvalid": "Slug may only contain lowercase letters, numbers, and hyphens (min 2 chars).",
+      "generic": "Could not create the business. Please try again."
+    }
   },
   "slots": {
-    "title": "Daily Schedule (Local Preview)",
-    "subtitle": "Select a time slot to simulate a local booking without a database.",
-    "resetButton": "Reset demo",
+    "title": "Daily Schedule (Interactive Preview)",
+    "subtitle": "Interactive schedule preview; full live slot booking expands in the next milestone.",
+    "resetButton": "Reset selection",
     "statusAvailable": "Available",
     "statusReserved": "Selected",
     "bookButton": "Select",
@@ -106,35 +169,35 @@
     "browserHint": "On desktop or Android you can install the app from the browser menu when served over HTTPS."
   },
   "roadmap": {
-    "title": "Milestone 1 Plan",
-    "subtitle": "What is already in place and what comes next.",
+    "title": "Milestone Progress",
+    "subtitle": "What is live today and what is coming next.",
     "completedLabel": "Completed",
-    "nextLabel": "Next Milestone",
+    "nextLabel": "Next Phase",
     "items": [
       {
-        "title": "Next.js App Router + TypeScript",
-        "description": "Modern structure with strict type validation.",
+        "title": "App Router Foundation, Multi-Language & PWA",
+        "description": "Next.js App Router, TypeScript, IT/EN/AR/ES with RTL, and Service Worker.",
         "done": true
       },
       {
-        "title": "Italian default + EN, AR, ES",
-        "description": "Typed translation dictionaries and automatic RTL for Arabic.",
+        "title": "Supabase Auth & SSR Session Persistence",
+        "description": "Sign up, sign in, callback verification, cookie persistence, and logout.",
         "done": true
       },
       {
-        "title": "Mobile-First UI + PWA",
-        "description": "Manifest, PNG icons, Service Worker, and touch navigation.",
+        "title": "User Profiles & Multi-Tenant Businesses",
+        "description": "RLS-protected business creation, live profile view, and live database metrics.",
         "done": true
       },
       {
-        "title": "Supabase Integration (Milestone 2)",
-        "description": "Authentication, real slot persistence, and notifications.",
+        "title": "Live Slot Booking & Notifications (Milestone 3)",
+        "description": "Full database-backed slot management and push notification delivery.",
         "done": false
       }
     ]
   },
   "footer": {
-    "note": "SlotMate · Milestone 1 · Ready for the next development phase."
+    "note": "SlotMate · Milestone 2 · Live Supabase Auth & Multi-Tenant Dashboard."
   },
   "auth": {
     "header": {
@@ -143,13 +206,14 @@
       "logout": "Log out",
       "loggingOut": "Logging out...",
       "signedInAs": "Signed in",
+      "signedOut": "Signed out",
       "sessionActive": "Active session",
-      "backToHome": "Back to home"
+      "backToHome": "Back to dashboard"
     },
     "login": {
       "metaTitle": "Sign in — SlotMate",
       "metaDescription": "Sign in to your SlotMate account with persistent session support.",
-      "badge": "Milestone 2 · Authentication",
+      "badge": "Account Sign-In",
       "title": "Welcome back to SlotMate",
       "subtitle": "Enter your credentials to access your persisted session.",
       "emailLabel": "Email",
@@ -168,7 +232,7 @@
     "register": {
       "metaTitle": "Register — SlotMate",
       "metaDescription": "Create your SlotMate account and set up your workspace.",
-      "badge": "Milestone 2 · New Account",
+      "badge": "New Account",
       "title": "Create your SlotMate account",
       "subtitle": "Sign up in seconds to initialize your profile and workspace.",
       "fullNameLabel": "Full name",

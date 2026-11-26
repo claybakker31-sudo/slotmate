@@ -1,56 +1,119 @@
 {
   "metadata": {
-    "title": "SlotMate — إدارة المواعيد بذكاء",
-    "description": "تطبيق ويب تقدمي مصمم أولاً للهواتف لتنظيم الفترات الزمنية والمواعيد بسهولة."
+    "title": "SlotMate — إدارة المواعيد متعددة المستأجرين",
+    "description": "تطبيق ويب تقدمي مصمم أولاً للهواتف مع مصادقة Supabase والملفات الشخصية ومساحات العمل."
   },
   "header": {
     "brand": "SlotMate",
-    "tagline": "المرحلة 1 · الأساس",
+    "tagline": "المرحلة 2 · مساحات عمل متعددة المستأجرين",
     "languageLabel": "اللغة",
     "offlineBadge": "وضع عدم الاتصال",
     "onlineBadge": "متصل"
   },
   "hero": {
-    "badge": "المرحلة 1 · معاينة محلية",
-    "title": "نظّم كل فترة زمنية بكل وضوح وسهولة.",
-    "subtitle": "تم بناء SlotMate أولاً للهواتف الذكية مع دعم أصلي لعدة لغات وقابلية التثبيت كتطبيق (PWA). سيبدأ دمج Supabase في المرحلة 2.",
-    "primaryAction": "استكشف المواعيد التجريبية",
+    "badge": "المرحلة 2 · المصادقة وقاعدة البيانات المباشرة",
+    "title": "نظّم أعمالك ومواعيدك في الوقت الفعلي.",
+    "subtitle": "يربط SlotMate مصادقة Supabase والملفات الشخصية ومساحات العمل المعزولة عبر أمان مستوى الصف (RLS).",
+    "primaryAction": "استكشف الجدول",
     "secondaryAction": "حالة PWA"
   },
   "tabs": {
-    "overview": "نظرة عامة",
-    "slots": "مواعيد تجريبية",
+    "overview": "لوحة التحكم",
+    "slots": "الجدول",
     "pwa": "التطبيق وPWA",
     "roadmap": "المرحلة"
   },
   "metrics": {
-    "title": "حالة الأساس التقني",
+    "title": "حالة المنصة المباشرة",
     "items": [
       {
-        "label": "اللغة الافتراضية",
-        "value": "الإيطالية (IT)",
-        "detail": "جاهز للغات EN وAR (RTL) وES"
-      },
-      {
-        "label": "التصميم",
-        "value": "Mobile-First",
-        "detail": "واجهة متجاوبة باستخدام Tailwind CSS"
+        "label": "اللغة النشطة",
+        "value": "العربية (AR)",
+        "detail": "دعم أصلي للغات IT وEN وAR (RTL) وES"
       },
       {
         "label": "تجربة التطبيق",
         "value": "جاهز لـ PWA",
-        "detail": "ملف Manifest وأيقونات وService Worker"
-      },
-      {
-        "label": "قاعدة البيانات",
-        "value": "قيد الانتظار (M2)",
-        "detail": "لم يتم بدء Supabase بعد"
+        "detail": "ملف Manifest والأيقونات وService Worker نشطة"
       }
-    ]
+    ],
+    "authCard": {
+      "label": "المصادقة",
+      "authenticatedValue": "مسجل الدخول",
+      "unauthenticatedValue": "زائر",
+      "authenticatedDetail": "جلسة SSR موثقة عبر Supabase Auth",
+      "unauthenticatedDetail": "سجّل الدخول أو أنشئ حساباً لعرض مساحة عملك"
+    },
+    "databaseCard": {
+      "label": "قاعدة بيانات Supabase",
+      "connectedValue": "متصل",
+      "guestValue": "Supabase نشط",
+      "offlineValue": "غير متاح",
+      "workspacesWord": "أعمال",
+      "slotsWord": "مواعيد",
+      "guestDetail": "سياسات RLS مفعلة · سجّل الدخول لتحميل أعمالك",
+      "offlineDetail": "تعذر التحقق من الاتصال بقاعدة البيانات"
+    }
+  },
+  "dashboard": {
+    "authBadge": "حالة المصادقة المباشرة",
+    "authenticated": "تم التحقق",
+    "unauthenticated": "غير مسجل الدخول",
+    "verifiedEmail": "البريد الإلكتروني مؤكد",
+    "pendingEmail": "بانتظار تأكيد البريد الإلكتروني",
+    "guestCardTitle": "سجّل الدخول إلى مساحة عملك في SlotMate",
+    "guestCardBody": "سجّل الدخول عبر Supabase لعرض ملفك الشخصي وإنشاء أنشطة تجارية معزولة ومزامنة البيانات مباشرة من قاعدة البيانات.",
+    "profileTitle": "ملفك الشخصي",
+    "profileSubtitle": "بيانات متزامنة مباشرة من Supabase Auth وجدول profiles.",
+    "fullNameLabel": "الاسم الكامل",
+    "emailLabel": "البريد الإلكتروني",
+    "preferredLocaleLabel": "اللغة المفضلة",
+    "memberSinceLabel": "عضو منذ",
+    "lastSignInLabel": "آخر تسجيل دخول",
+    "userIdLabel": "معرّف المستخدم",
+    "unnamedUser": "مستخدم بدون اسم",
+    "businessesTitle": "أنشطتك التجارية",
+    "businessesSubtitle": "مساحات عمل متعددة المستأجرين مرتبطة بحسابك.",
+    "noBusinesses": "لم تقم بإنشاء أي نشاط تجاري بعد. استخدم النموذج المجاور لإنشاء مساحة عملك الأولى.",
+    "slotsCountLabel": "مواعيد محفوظة",
+    "statusActive": "نشط",
+    "statusInactive": "غير نشط",
+    "roleLabels": {
+      "owner": "مالك",
+      "admin": "مدير",
+      "staff": "موظف"
+    },
+    "createTitle": "إنشاء نشاط تجاري جديد",
+    "createSubtitle": "أنشئ مساحة عمل معزولة عبر الدالة الذرية register_business.",
+    "nameLabel": "اسم النشاط التجاري",
+    "namePlaceholder": "مثال: استوديو النور",
+    "slugLabel": "الرابط المختصر Slug (اختياري)",
+    "slugPlaceholder": "alnoor-studio",
+    "slugHint": "اتركه فارغاً لتوليده تلقائياً من الاسم.",
+    "categoryLabel": "الفئة",
+    "categories": {
+      "general": "عام",
+      "consulting": "استشارات",
+      "healthcare": "الصحة والعيادات",
+      "beauty": "التجميل والعناية",
+      "fitness": "اللياقة والتدريب",
+      "other": "أخرى"
+    },
+    "timezoneLabel": "المنطقة الزمنية",
+    "submit": "إنشاء النشاط",
+    "submitting": "جارٍ الإنشاء...",
+    "createdSuccess": "تم إنشاء النشاط وحفظه في Supabase:",
+    "errors": {
+      "unauthenticated": "يجب تسجيل الدخول لإنشاء نشاط تجاري.",
+      "nameLength": "يجب أن يتراوح اسم النشاط بين 2 و120 حرفاً.",
+      "slugTaken": "هذا الرابط المختصر مستخدم بالفعل. اختر رابطاً آخر.",
+      "slugInvalid": "يمكن أن يحتوي الرابط على أحرف إنجليزية صغيرة وأرقام وشرطات فقط (حرفان على الأقل).",
+      "generic": "تعذر إنشاء النشاط التجاري. يرجى المحاولة مرة أخرى."
+    }
   },
   "slots": {
-    "title": "الجدول اليومي (معاينة محلية)",
-    "subtitle": "اختر فترة زمنية لمحاكاة الحجز محلياً بدون قاعدة بيانات.",
+    "title": "الجدول اليومي (معاينة تفاعلية)",
+    "subtitle": "معاينة تفاعلية للجدول؛ سيتم توسيع الحجز المباشر الكامل للمواعيد في المرحلة القادمة.",
     "resetButton": "إعادة تعيين",
     "statusAvailable": "متاح",
     "statusReserved": "مختار",
@@ -106,35 +169,35 @@
     "browserHint": "على سطح المكتب أو Android يمكنك تثبيت التطبيق من قائمة المتصفح عند العمل عبر HTTPS."
   },
   "roadmap": {
-    "title": "خطة المرحلة 1",
-    "subtitle": "ما تم إنجازه الآن وما سيأتي في المرحلة التالية.",
+    "title": "تقدم المراحل",
+    "subtitle": "الميزات المفعلة حالياً وما سيأتي في المرحلة التالية.",
     "completedLabel": "مكتمل",
     "nextLabel": "المرحلة القادمة",
     "items": [
       {
-        "title": "Next.js App Router + TypeScript",
-        "description": "بنية حديثة مع فحص صارم للأنواع.",
+        "title": "أساس App Router وتعدد اللغات وPWA",
+        "description": "Next.js App Router وTypeScript وIT/EN/AR/ES مع RTL وService Worker.",
         "done": true
       },
       {
-        "title": "الإيطالية افتراضياً + EN وAR وES",
-        "description": "قواميس ترجمة منظمة ودعم تلقائي لاتجاه RTL للعربية.",
+        "title": "مصادقة Supabase واستمرارية الجلسة SSR",
+        "description": "التسجيل وتسجيل الدخول ومعالجة العودة وحفظ ملفات تعريف الارتباط وتسجيل الخروج.",
         "done": true
       },
       {
-        "title": "واجهة Mobile-First + PWA",
-        "description": "ملف Manifest وأيقونات PNG وService Worker وتنقل مريح للمس.",
+        "title": "الملفات الشخصية والأعمال متعددة المستأجرين",
+        "description": "إنشاء الأنشطة مع RLS وعرض الملف الشخصي المباشر ومؤشرات قاعدة البيانات.",
         "done": true
       },
       {
-        "title": "دمج Supabase (المرحلة 2)",
-        "description": "المصادقة وحفظ المواعيد فعلياً والإشعارات.",
+        "title": "حجز المواعيد المباشر والإشعارات (المرحلة 3)",
+        "description": "إدارة المواعيد الكاملة عبر قاعدة البيانات وإرسال الإشعارات.",
         "done": false
       }
     ]
   },
   "footer": {
-    "note": "SlotMate · المرحلة 1 · جاهز لمرحلة التطوير التالية."
+    "note": "SlotMate · المرحلة 2 · مصادقة Supabase ولوحة التحكم متعددة المستأجرين مفعلة."
   },
   "auth": {
     "header": {
@@ -143,13 +206,14 @@
       "logout": "تسجيل الخروج",
       "loggingOut": "جارٍ الخروج...",
       "signedInAs": "مسجل الدخول",
+      "signedOut": "غير مسجل",
       "sessionActive": "جلسة نشطة",
-      "backToHome": "العودة للرئيسية"
+      "backToHome": "العودة للوحة التحكم"
     },
     "login": {
       "metaTitle": "تسجيل الدخول — SlotMate",
       "metaDescription": "سجّل الدخول إلى حسابك في SlotMate مع حفظ الجلسة.",
-      "badge": "المرحلة 2 · المصادقة",
+      "badge": "تسجيل الدخول",
       "title": "مرحباً بعودتك إلى SlotMate",
       "subtitle": "أدخل بياناتك للوصول إلى جلستك المحفوظة.",
       "emailLabel": "البريد الإلكتروني",
@@ -168,7 +232,7 @@
     "register": {
       "metaTitle": "إنشاء حساب — SlotMate",
       "metaDescription": "أنشئ حسابك في SlotMate وابدأ بإدارة المواعيد.",
-      "badge": "المرحلة 2 · حساب جديد",
+      "badge": "حساب جديد",
       "title": "أنشئ حسابك في SlotMate",
       "subtitle": "سجّل خلال ثوانٍ لتفعيل ملفك الشخصي ومساحة عملك.",
       "fullNameLabel": "الاسم الكامل",

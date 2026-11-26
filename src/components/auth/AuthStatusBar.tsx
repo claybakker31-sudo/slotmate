@@ -1,36 +1,39 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { getCurrentUser } from "@/lib/supabase/auth";
+import { getDashboardData } from "@/lib/supabase/dashboard";
 import { LogoutButton } from "./LogoutButton";
 import { SessionSync } from "./SessionSync";
 
 interface AuthStatusBarProps {
   locale: Locale;
   authCopy: Dictionary["auth"];
+  dashboardCopy: Dictionary["dashboard"];
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }
 
 export async function AuthStatusBar({
   locale,
   authCopy,
+  dashboardCopy,
   searchParams,
 }: AuthStatusBarProps) {
-  const [user, resolvedSearchParams] = await Promise.all([
-    getCurrentUser(),
+  const [data, resolvedSearchParams] = await Promise.all([
+    getDashboardData(),
     searchParams ?? Promise.resolve({} as Record<string, string | string[] | undefined>),
   ]);
 
   const isConfirmed = resolvedSearchParams.auth === "confirmed";
+  const user = data.profile;
 
   return (
     <section
-      aria-label={authCopy.header.signedInAs}
+      aria-label={dashboardCopy.authBadge}
       className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-xs dark:border-slate-800 dark:bg-slate-900"
     >
       <SessionSync />
 
-      {user ? (
+      {data.isAuthenticated && user ? (
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2.5">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
@@ -62,9 +65,15 @@ export async function AuthStatusBar({
         </div>
       ) : (
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-xs font-medium text-slate-600 dark:text-slate-300">
-            {authCopy.login.badge}
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+              <span className="h-2 w-2 rounded-full bg-amber-500" />
+              {authCopy.header.signedOut}
+            </span>
+            <span className="hidden text-xs text-slate-600 dark:text-slate-400 sm:inline">
+              {dashboardCopy.authBadge}
+            </span>
+          </div>
           <div className="flex items-center gap-2">
             <Link
               href={`/${locale}/login`}

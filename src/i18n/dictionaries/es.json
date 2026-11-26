@@ -1,57 +1,120 @@
 {
   "metadata": {
-    "title": "SlotMate — Gestión Inteligente de Citas",
-    "description": "Aplicación web progresiva mobile-first para organizar franjas horarias y citas de forma sencilla."
+    "title": "SlotMate — Gestión Multi-Tenant de Citas",
+    "description": "Aplicación web progresiva mobile-first con autenticación Supabase, perfiles de usuario y espacios de trabajo empresariales."
   },
   "header": {
     "brand": "SlotMate",
-    "tagline": "Hito 1 · Base",
+    "tagline": "Hito 2 · Espacios Multi-Tenant",
     "languageLabel": "Idioma",
     "offlineBadge": "Modo sin conexión",
     "onlineBadge": "En línea"
   },
   "hero": {
-    "badge": "Hito 1 · Vista Previa Local",
-    "title": "Organiza cada franja horaria con claridad.",
-    "subtitle": "SlotMate está diseñada primero para móviles, con soporte multilingüe nativo e instalación como app (PWA). La integración con Supabase comenzará en el Hito 2.",
-    "primaryAction": "Explorar franjas demo",
+    "badge": "Hito 2 · Autenticación y Base de Datos en Vivo",
+    "title": "Organiza negocios y franjas horarias en tiempo real.",
+    "subtitle": "SlotMate integra Supabase Auth, perfiles de usuario y espacios de trabajo multi-tenant protegidos por Row Level Security.",
+    "primaryAction": "Explorar agenda",
     "secondaryAction": "Estado PWA"
   },
   "tabs": {
-    "overview": "Resumen",
-    "slots": "Franjas Demo",
+    "overview": "Panel",
+    "slots": "Agenda",
     "pwa": "App y PWA",
     "roadmap": "Hito"
   },
   "metrics": {
-    "title": "Estado de la Base",
+    "title": "Estado de la Plataforma en Vivo",
     "items": [
       {
-        "label": "Idioma predeterminado",
-        "value": "Italiano (IT)",
-        "detail": "Listo para EN, AR (RTL), ES"
-      },
-      {
-        "label": "Diseño",
-        "value": "Mobile-First",
-        "detail": "Diseño adaptable con Tailwind CSS"
+        "label": "Idioma activo",
+        "value": "Español (ES)",
+        "detail": "Soporte nativo IT, EN, AR (RTL), ES"
       },
       {
         "label": "Experiencia App",
         "value": "PWA Ready",
-        "detail": "Manifiesto, iconos y Service Worker"
-      },
-      {
-        "label": "Base de datos",
-        "value": "Pendiente (H2)",
-        "detail": "Supabase aún no iniciado"
+        "detail": "Manifiesto, iconos y Service Worker activos"
       }
-    ]
+    ],
+    "authCard": {
+      "label": "Autenticación",
+      "authenticatedValue": "Autenticado",
+      "unauthenticatedValue": "Invitado",
+      "authenticatedDetail": "Sesión SSR verificada con Supabase Auth",
+      "unauthenticatedDetail": "Inicia sesión o regístrate para ver tus datos"
+    },
+    "databaseCard": {
+      "label": "Base de datos Supabase",
+      "connectedValue": "Conectada",
+      "guestValue": "Supabase Activo",
+      "offlineValue": "No disponible",
+      "workspacesWord": "negocios",
+      "slotsWord": "franjas",
+      "guestDetail": "RLS activo · Inicia sesión para cargar tus espacios",
+      "offlineDetail": "No se pudo verificar la conexión a la base de datos"
+    }
+  },
+  "dashboard": {
+    "authBadge": "Estado de Autenticación en Vivo",
+    "authenticated": "Autenticado",
+    "unauthenticated": "Sin sesión",
+    "verifiedEmail": "Correo verificado",
+    "pendingEmail": "Verificación de correo pendiente",
+    "guestCardTitle": "Accede a tu espacio de trabajo SlotMate",
+    "guestCardBody": "Autentícate con Supabase para ver tu perfil, crear negocios aislados y consultar métricas reales desde la base de datos.",
+    "profileTitle": "Tu Perfil",
+    "profileSubtitle": "Sincronizado en vivo desde Supabase Auth y public.profiles.",
+    "fullNameLabel": "Nombre completo",
+    "emailLabel": "Correo electrónico",
+    "preferredLocaleLabel": "Idioma preferido",
+    "memberSinceLabel": "Miembro desde",
+    "lastSignInLabel": "Último acceso",
+    "userIdLabel": "ID de usuario",
+    "unnamedUser": "Usuario sin nombre",
+    "businessesTitle": "Tus Negocios",
+    "businessesSubtitle": "Espacios de trabajo multi-tenant vinculados a tu cuenta.",
+    "noBusinesses": "Todavía no has creado ningún negocio. Usa el formulario adjunto para crear tu primer espacio de trabajo.",
+    "slotsCountLabel": "franjas guardadas",
+    "statusActive": "Activo",
+    "statusInactive": "Inactivo",
+    "roleLabels": {
+      "owner": "Propietario",
+      "admin": "Admin",
+      "staff": "Personal"
+    },
+    "createTitle": "Crear un Negocio",
+    "createSubtitle": "Crea un espacio aislado mediante la función atómica register_business.",
+    "nameLabel": "Nombre del negocio",
+    "namePlaceholder": "Ej. Estudio García",
+    "slugLabel": "Slug URL (opcional)",
+    "slugPlaceholder": "estudio-garcia",
+    "slugHint": "Déjalo vacío para generarlo automáticamente a partir del nombre.",
+    "categoryLabel": "Categoría",
+    "categories": {
+      "general": "General",
+      "consulting": "Consultoría",
+      "healthcare": "Salud y Clínicas",
+      "beauty": "Estética y Bienestar",
+      "fitness": "Fitness y Deporte",
+      "other": "Otro"
+    },
+    "timezoneLabel": "Zona horaria",
+    "submit": "Crear negocio",
+    "submitting": "Creando negocio...",
+    "createdSuccess": "Negocio creado y guardado en Supabase:",
+    "errors": {
+      "unauthenticated": "Debes iniciar sesión para crear un negocio.",
+      "nameLength": "El nombre del negocio debe tener entre 2 y 120 caracteres.",
+      "slugTaken": "Ese slug URL ya está en uso. Elige otro.",
+      "slugInvalid": "El slug solo puede contener minúsculas, números y guiones (mín. 2 caracteres).",
+      "generic": "No se pudo crear el negocio. Inténtalo de nuevo."
+    }
   },
   "slots": {
-    "title": "Agenda Diaria (Vista Local)",
-    "subtitle": "Selecciona una franja horaria para simular una reserva local sin base de datos.",
-    "resetButton": "Reiniciar demo",
+    "title": "Agenda Diaria (Vista Interactiva)",
+    "subtitle": "Vista previa interactiva de agenda; la reserva completa en base de datos se ampliará en el siguiente hito.",
+    "resetButton": "Reiniciar selección",
     "statusAvailable": "Disponible",
     "statusReserved": "Seleccionado",
     "bookButton": "Seleccionar",
@@ -106,35 +169,35 @@
     "browserHint": "En escritorio o Android puedes instalar la app desde el menú del navegador bajo HTTPS."
   },
   "roadmap": {
-    "title": "Plan del Hito 1",
-    "subtitle": "Lo que ya está construido y lo que llegará después.",
+    "title": "Progreso de Hitos",
+    "subtitle": "Lo que ya está activo hoy y lo que llegará en la siguiente fase.",
     "completedLabel": "Completado",
-    "nextLabel": "Siguiente Hito",
+    "nextLabel": "Siguiente Fase",
     "items": [
       {
-        "title": "Next.js App Router + TypeScript",
-        "description": "Estructura moderna con validación estricta de tipos.",
+        "title": "Base App Router, Multilingüe y PWA",
+        "description": "Next.js App Router, TypeScript, IT/EN/AR/ES con RTL y Service Worker.",
         "done": true
       },
       {
-        "title": "Italiano por defecto + EN, AR, ES",
-        "description": "Diccionarios tipados y soporte RTL automático para árabe.",
+        "title": "Autenticación Supabase y Sesión SSR",
+        "description": "Registro, inicio de sesión, callback de verificación, cookies persistentes y cierre de sesión.",
         "done": true
       },
       {
-        "title": "Interfaz Mobile-First + PWA",
-        "description": "Manifiesto, iconos PNG, Service Worker y navegación táctil.",
+        "title": "Perfiles y Negocios Multi-Tenant",
+        "description": "Creación de negocios con RLS, vista de perfil en vivo y métricas reales de Supabase.",
         "done": true
       },
       {
-        "title": "Integración con Supabase (Hito 2)",
-        "description": "Autenticación, persistencia real de citas y notificaciones.",
+        "title": "Reservas en Vivo y Notificaciones (Hito 3)",
+        "description": "Gestión completa de franjas en base de datos y notificaciones push.",
         "done": false
       }
     ]
   },
   "footer": {
-    "note": "SlotMate · Hito 1 · Lista para la siguiente fase."
+    "note": "SlotMate · Hito 2 · Autenticación Supabase y Panel Multi-Tenant activos."
   },
   "auth": {
     "header": {
@@ -143,13 +206,14 @@
       "logout": "Cerrar sesión",
       "loggingOut": "Saliendo...",
       "signedInAs": "Sesión iniciada",
+      "signedOut": "Sin sesión",
       "sessionActive": "Sesión activa",
-      "backToHome": "Volver al inicio"
+      "backToHome": "Volver al panel"
     },
     "login": {
       "metaTitle": "Iniciar sesión — SlotMate",
       "metaDescription": "Inicia sesión en tu cuenta de SlotMate con sesión persistente.",
-      "badge": "Hito 2 · Autenticación",
+      "badge": "Acceso a Cuenta",
       "title": "Bienvenido de nuevo a SlotMate",
       "subtitle": "Introduce tus credenciales para acceder a tu sesión.",
       "emailLabel": "Correo electrónico",
@@ -168,7 +232,7 @@
     "register": {
       "metaTitle": "Registrarse — SlotMate",
       "metaDescription": "Crea tu cuenta de SlotMate y configura tu espacio de trabajo.",
-      "badge": "Hito 2 · Nueva Cuenta",
+      "badge": "Nueva Cuenta",
       "title": "Crea tu cuenta en SlotMate",
       "subtitle": "Regístrate en segundos para activar tu perfil y espacio de trabajo.",
       "fullNameLabel": "Nombre completo",

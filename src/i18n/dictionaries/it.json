@@ -1,57 +1,120 @@
 {
   "metadata": {
-    "title": "SlotMate — Gestione Appuntamenti Smart",
-    "description": "Applicazione web progressiva mobile-first per organizzare fasce orarie e appuntamenti in modo semplice."
+    "title": "SlotMate — Gestione Appuntamenti Multi-Tenant",
+    "description": "Applicazione web progressiva mobile-first con autenticazione Supabase, profili utente e spazi di lavoro aziendali."
   },
   "header": {
     "brand": "SlotMate",
-    "tagline": "Milestone 1 · Fondamenta",
+    "tagline": "Milestone 2 · Spazi di Lavoro Multi-Tenant",
     "languageLabel": "Lingua",
     "offlineBadge": "Modalità offline",
     "onlineBadge": "Online"
   },
   "hero": {
-    "badge": "Milestone 1 · Anteprima Locale",
-    "title": "Organizza ogni fascia oraria con semplicità.",
-    "subtitle": "SlotMate è progettata prima per smartphone, con supporto multilingua nativo e installazione come app (PWA). L'integrazione con Supabase arriverà nella Milestone 2.",
-    "primaryAction": "Esplora gli slot demo",
+    "badge": "Milestone 2 · Autenticazione & Database Live",
+    "title": "Organizza attività e fasce orarie in tempo reale.",
+    "subtitle": "SlotMate collega autenticazione Supabase, profili utente e aree di lavoro multi-tenant isolate tramite Row Level Security.",
+    "primaryAction": "Esplora agenda",
     "secondaryAction": "Stato PWA"
   },
   "tabs": {
-    "overview": "Panoramica",
-    "slots": "Slot Demo",
+    "overview": "Dashboard",
+    "slots": "Agenda",
     "pwa": "App & PWA",
     "roadmap": "Milestone"
   },
   "metrics": {
-    "title": "Stato delle Fondamenta",
+    "title": "Stato Piattaforma Live",
     "items": [
       {
-        "label": "Lingua predefinita",
+        "label": "Lingua attiva",
         "value": "Italiano (IT)",
-        "detail": "Pronta per EN, AR (RTL), ES"
-      },
-      {
-        "label": "Design",
-        "value": "Mobile-First",
-        "detail": "Layout adattivo con Tailwind CSS"
+        "detail": "Supporto nativo IT, EN, AR (RTL), ES"
       },
       {
         "label": "Esperienza App",
         "value": "PWA Ready",
-        "detail": "Manifest, icone e Service Worker"
-      },
-      {
-        "label": "Database",
-        "value": "In attesa (M2)",
-        "detail": "Supabase non ancora avviato"
+        "detail": "Manifest, icone e Service Worker attivi"
       }
-    ]
+    ],
+    "authCard": {
+      "label": "Autenticazione",
+      "authenticatedValue": "Autenticato",
+      "unauthenticatedValue": "Ospite",
+      "authenticatedDetail": "Sessione SSR verificata con Supabase",
+      "unauthenticatedDetail": "Accedi o registrati per sbloccare i tuoi dati"
+    },
+    "databaseCard": {
+      "label": "Database Supabase",
+      "connectedValue": "Connesso",
+      "guestValue": "Supabase Attivo",
+      "offlineValue": "Non raggiungibile",
+      "workspacesWord": "attività",
+      "slotsWord": "slot",
+      "guestDetail": "RLS attivo · Accedi per caricare i tuoi workspace",
+      "offlineDetail": "Impossibile verificare la connessione al database"
+    }
+  },
+  "dashboard": {
+    "authBadge": "Stato Autenticazione Reale",
+    "authenticated": "Autenticato",
+    "unauthenticated": "Non autenticato",
+    "verifiedEmail": "Email verificata",
+    "pendingEmail": "Email in attesa di verifica",
+    "guestCardTitle": "Accedi al tuo spazio di lavoro SlotMate",
+    "guestCardBody": "Autenticati con Supabase per visualizzare il tuo profilo, creare attività aziendali isolate e sincronizzare i dati dal database live.",
+    "profileTitle": "Il tuo Profilo",
+    "profileSubtitle": "Dati sincronizzati in tempo reale da Supabase Auth e tabella profiles.",
+    "fullNameLabel": "Nome completo",
+    "emailLabel": "Email",
+    "preferredLocaleLabel": "Lingua preferita",
+    "memberSinceLabel": "Iscritto dal",
+    "lastSignInLabel": "Ultimo accesso",
+    "userIdLabel": "ID utente",
+    "unnamedUser": "Utente senza nome",
+    "businessesTitle": "Le tue Attività",
+    "businessesSubtitle": "Spazi di lavoro multi-tenant collegati al tuo account.",
+    "noBusinesses": "Non hai ancora creato nessuna attività. Usa il modulo accanto per avviare il tuo primo spazio di lavoro.",
+    "slotsCountLabel": "slot salvati",
+    "statusActive": "Attiva",
+    "statusInactive": "Inattiva",
+    "roleLabels": {
+      "owner": "Proprietario",
+      "admin": "Admin",
+      "staff": "Staff"
+    },
+    "createTitle": "Crea una nuova Attività",
+    "createSubtitle": "Crea uno spazio di lavoro isolato tramite la funzione atomica register_business.",
+    "nameLabel": "Nome attività",
+    "namePlaceholder": "Es. Studio Rossi",
+    "slugLabel": "Slug URL (opzionale)",
+    "slugPlaceholder": "studio-rossi",
+    "slugHint": "Lascia vuoto per generarlo automaticamente dal nome.",
+    "categoryLabel": "Categoria",
+    "categories": {
+      "general": "Generale",
+      "consulting": "Consulenza",
+      "healthcare": "Salute & Studi",
+      "beauty": "Estetica & Benessere",
+      "fitness": "Fitness & Sport",
+      "other": "Altro"
+    },
+    "timezoneLabel": "Fuso orario",
+    "submit": "Crea attività",
+    "submitting": "Creazione in corso...",
+    "createdSuccess": "Attività creata e salvata su Supabase:",
+    "errors": {
+      "unauthenticated": "Devi accedere per creare una nuova attività.",
+      "nameLength": "Il nome dell'attività deve contenere tra 2 e 120 caratteri.",
+      "slugTaken": "Questo slug URL è già occupato. Scegline un altro.",
+      "slugInvalid": "Lo slug può contenere solo lettere minuscole, numeri e trattini (min 2 caratteri).",
+      "generic": "Impossibile creare l'attività. Riprova tra qualche istante."
+    }
   },
   "slots": {
-    "title": "Agenda Giornaliera (Anteprima Locale)",
-    "subtitle": "Seleziona una fascia oraria per simulare una prenotazione locale senza database.",
-    "resetButton": "Ripristina demo",
+    "title": "Agenda Giornaliera (Anteprima Interattiva)",
+    "subtitle": "Anteprima interattiva dell'agenda; la prenotazione completa degli slot sarà estesa nella prossima fase.",
+    "resetButton": "Ripristina selezione",
     "statusAvailable": "Disponibile",
     "statusReserved": "Selezionato",
     "bookButton": "Seleziona",
@@ -106,35 +169,35 @@
     "browserHint": "Su desktop o Android puoi installare l'app dal menu del browser quando è servita in HTTPS."
   },
   "roadmap": {
-    "title": "Piano Milestone 1",
-    "subtitle": "Cosa è incluso ora e cosa arriverà nei prossimi passi.",
+    "title": "Stato delle Milestone",
+    "subtitle": "Funzionalità attive oggi e prossimi sviluppi della piattaforma.",
     "completedLabel": "Completato",
-    "nextLabel": "Prossima Milestone",
+    "nextLabel": "Prossima Fase",
     "items": [
       {
-        "title": "Next.js App Router + TypeScript",
-        "description": "Struttura moderna con validazione rigorosa dei tipi.",
+        "title": "Fondamenta App Router, Multilingua & PWA",
+        "description": "Next.js App Router, TypeScript, IT/EN/AR/ES con RTL e Service Worker.",
         "done": true
       },
       {
-        "title": "Italiano predefinito + EN, AR, ES",
-        "description": "Traduzioni tipizzate e supporto RTL automatico per l'arabo.",
+        "title": "Autenticazione Supabase & Sessione SSR",
+        "description": "Registrazione, login, callback OAuth/email, persistenza cookie e logout.",
         "done": true
       },
       {
-        "title": "Interfaccia Mobile-First + PWA",
-        "description": "Manifesto, icone PNG, Service Worker e navigazione touch.",
+        "title": "Profili & Spazi di Lavoro Multi-Tenant",
+        "description": "Creazione attività con RLS, lettura profili live e metriche Supabase.",
         "done": true
       },
       {
-        "title": "Integrazione Supabase (Milestone 2)",
-        "description": "Autenticazione, persistenza reale degli slot e notifiche.",
+        "title": "Prenotazione Slot Live & Notifiche (Milestone 3)",
+        "description": "Gestione completa degli slot su database e notifiche push.",
         "done": false
       }
     ]
   },
   "footer": {
-    "note": "SlotMate · Milestone 1 · Tutto pronto per i prossimi sviluppi."
+    "note": "SlotMate · Milestone 2 · Autenticazione Supabase e Dashboard Multi-Tenant attive."
   },
   "auth": {
     "header": {
@@ -143,13 +206,14 @@
       "logout": "Esci",
       "loggingOut": "Uscita...",
       "signedInAs": "Accesso attivo",
+      "signedOut": "Non connesso",
       "sessionActive": "Sessione attiva",
-      "backToHome": "Torna alla home"
+      "backToHome": "Torna alla dashboard"
     },
     "login": {
       "metaTitle": "Accedi — SlotMate",
       "metaDescription": "Accedi al tuo account SlotMate per mantenere la sessione attiva.",
-      "badge": "Milestone 2 · Autenticazione",
+      "badge": "Accesso Account",
       "title": "Bentornato su SlotMate",
       "subtitle": "Inserisci le tue credenziali per accedere alla tua sessione.",
       "emailLabel": "Email",
@@ -168,7 +232,7 @@
     "register": {
       "metaTitle": "Registrati — SlotMate",
       "metaDescription": "Crea il tuo account SlotMate e inizia a gestire gli appuntamenti.",
-      "badge": "Milestone 2 · Nuovo Account",
+      "badge": "Nuovo Account",
       "title": "Crea il tuo account SlotMate",
       "subtitle": "Registrati in pochi secondi per attivare profilo e area di lavoro.",
       "fullNameLabel": "Nome completo",
